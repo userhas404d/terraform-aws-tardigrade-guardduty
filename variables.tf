@@ -1,6 +1,6 @@
 variable "create_guardduty_member" {
   description = "Controls whether to create the GuardDuty member"
-  type        = string
+  type        = bool
   default     = true
 }
 
