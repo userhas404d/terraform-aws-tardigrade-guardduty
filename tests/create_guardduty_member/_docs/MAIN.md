@@ -1,1 +1,0 @@
-# Create GuardDuty Member Test

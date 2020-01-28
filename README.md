@@ -12,12 +12,26 @@ are assuming that you will be using a profile with the name `resource-owner` and
 Note: the implementation `tests/create_guardduty_member` will require you to provide the variables
 `guardduty_master_detector_id` and `email_address` prior to use
 
+
+<!-- BEGIN TFDOCS -->
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | n/a |
+| aws.master | n/a |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| create\_guardduty\_member | Controls whether to create the GuardDuty member | bool | `"true"` | no |
-| email\_address | Email address associated with the member account. Required input for the GuardDuty member invitation. | string | `"null"` | no |
-| guardduty\_master\_detector\_id | GuardDuty Detector ID for master account | string | `"null"` | no |
-| tags | A map of tags to add to the CFN resource for GuardDuty | map(string) | `<map>` | no |
+|------|-------------|------|---------|:-----:|
+| email\_address | Email address associated with the member account. Required input for the GuardDuty member invitation. | `string` | n/a | yes |
+| guardduty\_master\_detector\_id | GuardDuty Detector ID for master account | `string` | n/a | yes |
+| create\_guardduty\_member | Controls whether to create the GuardDuty member | `bool` | `true` | no |
+| tags | A map of tags to add to the CFN resource for GuardDuty | `map(string)` | `{}` | no |
 
+## Outputs
+
+No output.
+
+<!-- END TFDOCS -->
