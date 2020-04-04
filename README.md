@@ -14,6 +14,12 @@ Note: the implementation `tests/create_guardduty_member` will require you to pro
 
 
 <!-- BEGIN TFDOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12 |
+
 ## Providers
 
 | Name | Version |
@@ -24,10 +30,10 @@ Note: the implementation `tests/create_guardduty_member` will require you to pro
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
-| email\_address | Email address associated with the member account. Required input for the GuardDuty member invitation. | `string` | n/a | yes |
-| guardduty\_master\_detector\_id | GuardDuty Detector ID for master account | `string` | n/a | yes |
+|------|-------------|------|---------|:--------:|
 | create\_guardduty\_member | Controls whether to create the GuardDuty member | `bool` | `true` | no |
+| email\_address | Email address associated with the member account. Required input for the GuardDuty member invitation. | `string` | `null` | no |
+| guardduty\_master\_detector\_id | GuardDuty Detector ID for master account | `string` | `null` | no |
 | tags | A map of tags to add to the CFN resource for GuardDuty | `map(string)` | `{}` | no |
 
 ## Outputs
